@@ -55,6 +55,7 @@ namespace Server
                 if (Thread != null)
                     Thread.Abort();
 
+
                 Client = null;
                 Thread = null;
             }
@@ -157,6 +158,7 @@ namespace Server
                                                     user.Client = client;
                                                     user.Thread = new Thread(() => ServerReceive(client, username));
                                                     user.Thread.Start();
+                                                    
                                                     sendToClient(client, "success", new List<string>
                                                     {
                                                         "login",
@@ -277,6 +279,31 @@ namespace Server
 
         }
 
+        public void announce(string username, string state)
+        {
+            sendToAll("announce", new List<string>
+            {
+                username,
+                state,
+            });
+        }
+
+        public void sendToAll(string type, List<string> data)
+        {
+            foreach (var user in users)
+            {
+                var pack = new List<string>
+                    {
+                        type,
+                    };
+
+                pack.AddRange(data);
+
+                byte[] bytes = ObjectToByteArray(pack);
+                user.Value.Send(bytes);
+            }
+        }
+
         public void sendToUsers(List<string> users, string type, List<string> data)
         {
             foreach (var user in users)
@@ -395,6 +422,8 @@ namespace Server
 
         public void ServerReceive(TcpClient clientn, String username)
         {
+            //USER ONLINE
+            announce(username, "online");
             threadLogUI($"Đã từ [ĐẠI SẢNH] qua đây", username);
             byte[] data = new byte[15882925];
             while (true)
@@ -580,6 +609,7 @@ namespace Server
                     {
                         online.Items.Remove(username);
                     });
+                    announce(username, "offline");
                     users[username].Disconnect();
 
                    

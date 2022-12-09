@@ -387,6 +387,7 @@ namespace chat
                     {
                         var memberWithoutMe = item.Value.MemberWithout(Username);
                         var name = "";
+                        Status status = Status.None;
                         Bitmap image = null;
                         if (memberWithoutMe.Count > 1)
                         {

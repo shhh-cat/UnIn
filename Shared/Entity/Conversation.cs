@@ -8,6 +8,17 @@ namespace Shared.Entity
 {
     public class Conversation
     {
+        public class Member
+        {
+            public enum Status
+            {
+                Online,
+                Offline,
+                Unknown,
+            }
+            public string Username { get; set; }
+            public Member.Status UserStatus { get; set; }
+        }
         public class Message
         {
             public enum MsgType

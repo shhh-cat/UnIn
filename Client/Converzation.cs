@@ -108,7 +108,7 @@ namespace chat
                     }
                 default:
                     {
-                        pictureBox2.Image = Resources.Online_32;
+                        pictureBox2.Image = null;
                         break;
                     }
             }
@@ -239,6 +239,7 @@ namespace chat
     {
         Online,
         Away,
-        Offline
+        Offline,
+        None
     }
 }
