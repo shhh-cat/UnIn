@@ -205,6 +205,7 @@
             // 
             // youBubble1
             // 
+            this.youBubble1.AutoSize = true;
             this.youBubble1.BackColor = System.Drawing.Color.Transparent;
             this.youBubble1.Body = " This is a sample text message. This is a sample text message. This is a sample t" +
     "ext message. \n\nThis is a sample text message. ";
@@ -214,7 +215,7 @@
             this.youBubble1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.youBubble1.File = null;
             this.youBubble1.FileType = null;
-            this.youBubble1.Location = new System.Drawing.Point(0, 119);
+            this.youBubble1.Location = new System.Drawing.Point(0, 103);
             this.youBubble1.MinimumSize = new System.Drawing.Size(0, 95);
             this.youBubble1.MsgColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.youBubble1.MsgTextColor = System.Drawing.SystemColors.ControlDarkDark;

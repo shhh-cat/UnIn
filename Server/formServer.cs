@@ -29,6 +29,8 @@ namespace Server
             {
                 try
                 {
+                    if (Client == null)
+                        return false;
                     var stream = Client.GetStream();
                     stream.Write(bytes, 0, bytes.Length);
                     stream.Flush();

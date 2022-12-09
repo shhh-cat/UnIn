@@ -569,7 +569,8 @@ namespace chat
                                     bubble = new MeBubbleImage
                                     {
                                         Dock = DockStyle.Bottom,
-                                        Body = Resources.ResourceManager.GetObject($"ami_{message.Msg}") as Bitmap
+                                        Body = Resources.ResourceManager.GetObject($"ami_{message.Msg}") as Bitmap,
+                                        Time = DateTime.Now.ToString("HH:mm"),
                                     };
                                     bubble.SendToBack();
                                     userControls.Add(bubble);
@@ -578,7 +579,8 @@ namespace chat
                                     bubble = new MeBubble
                                     {
                                         Dock = DockStyle.Bottom,
-                                        Body = message.Msg
+                                        Body = message.Msg,
+                                        Time = DateTime.Now.ToString("HH:mm"),
                                     };
                                     bubble.SendToBack();
                                     userControls.Add(bubble);
@@ -588,6 +590,7 @@ namespace chat
                                     {
                                         Dock = DockStyle.Bottom,
                                         Body = $"[{message.FileName}]",
+                                        Time = DateTime.Now.ToString("HH:mm"),
                                     };
                                     bubble.SendToBack();
                                     userControls.Add(bubble);
@@ -601,6 +604,7 @@ namespace chat
                                         {
                                             Dock = DockStyle.Bottom,
                                             Body = Image.FromStream(ms),
+                                            Time = DateTime.Now.ToString("HH:mm"),
                                         };
                                         bubble.SendToBack();
                                         userControls.Add(bubble);

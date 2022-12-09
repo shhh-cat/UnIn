@@ -30,13 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.creator = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,30 +58,6 @@
             this.panel2.Size = new System.Drawing.Size(34, 34);
             this.panel2.TabIndex = 1;
             // 
-            // creator
-            // 
-            this.creator.AutoSize = true;
-            this.creator.BackColor = System.Drawing.Color.PowderBlue;
-            this.creator.Location = new System.Drawing.Point(44, 6);
-            this.creator.Name = "creator";
-            this.creator.Padding = new System.Windows.Forms.Padding(3);
-            this.creator.Size = new System.Drawing.Size(68, 19);
-            this.creator.TabIndex = 5;
-            this.creator.Text = "Người dùng";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::chat.Properties.Resources.ami_2;
-            this.pictureBox2.Location = new System.Drawing.Point(43, 35);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.pictureBox2.MaximumSize = new System.Drawing.Size(200, 0);
-            this.pictureBox2.MinimumSize = new System.Drawing.Size(0, 200);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Navy;
@@ -95,6 +71,32 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // creator
+            // 
+            this.creator.AutoSize = true;
+            this.creator.BackColor = System.Drawing.Color.PowderBlue;
+            this.creator.Dock = System.Windows.Forms.DockStyle.Left;
+            this.creator.Location = new System.Drawing.Point(245, 5);
+            this.creator.Name = "creator";
+            this.creator.Padding = new System.Windows.Forms.Padding(3);
+            this.creator.Size = new System.Drawing.Size(68, 19);
+            this.creator.TabIndex = 5;
+            this.creator.Text = "Người dùng";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = global::chat.Properties.Resources.ami_2;
+            this.pictureBox2.Location = new System.Drawing.Point(45, 5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.pictureBox2.MaximumSize = new System.Drawing.Size(200, 0);
+            this.pictureBox2.MinimumSize = new System.Drawing.Size(0, 200);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(200, 244);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // YouBubbleImage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,14 +105,15 @@
             this.Controls.Add(this.creator);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
+            this.MinimumSize = new System.Drawing.Size(0, 41);
             this.Name = "YouBubbleImage";
             this.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.Size = new System.Drawing.Size(270, 254);
             this.Load += new System.EventHandler(this.YouBubbleImage_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
